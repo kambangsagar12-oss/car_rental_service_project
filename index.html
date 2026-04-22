@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarRental - Home</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cookie.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+  <script src="cookie.js" defer></script>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">CarRental</div>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="cars.html">Cars</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="receipt.html">My Bookings</a></li>
+    </ul>
+
+    <button class="nav-btn" onclick="location.href='cars.html'">
+      Book Now
+    </button>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <video autoplay muted loop class="hero-video">
+      <source src="images/homepage.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1>Rent Your Dream Car</h1>
+      <p>Affordable, reliable, and luxury cars available anytime you need.</p>
+
+      <div class="hero-buttons">
+        <a href="cars.html" class="btn primary">Browse Cars</a>
+        <a href="about.html" class="btn secondary">Learn More</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="feature">
+      <h3>🚗 Wide Range</h3>
+      <p>Choose from economy, luxury, and SUV cars.</p>
+    </div>
+
+    <div class="feature">
+      <h3>💰 Best Prices</h3>
+      <p>Affordable daily and weekly rental plans.</p>
+    </div>
+
+    <div class="feature">
+      <h3>🕒 24/7 Support</h3>
+      <p>We are always here to help you anytime.</p>
+    </div>
+  </section>
+
+  <!-- COOKIE POPUP -->
+  <div id="cookie-popup">
+    <div class="cookie-box">
+      <h3>We value your privacy</h3>
+
+      <p>
+        We use cookies to improve your browsing experience,
+        personalize content, and analyze traffic.
+      </p>
+
+      <div class="cookie-buttons">
+        <button id="accept-cookies">Accept</button>
+        <button id="decline-cookies">Decline</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 CarRental. All Rights Reserved.</p>
+  </footer>
+
+
+</body>
+</html>
