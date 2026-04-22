@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Car Rental</title>
+  <link rel="stylesheet" href="aboutus.css">
+  <link rel="stylesheet" href="cookie.css">
+
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">CarRental</div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cars.html">Cars</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="receipt.html">My Bookings</a></li>
+    </ul>
+
+    <button class="nav-btn" onclick="location.href='cars.html'">Book Now</button>
+  </nav>
+
+  <!-- ABOUT US -->
+  <section class="about-section">
+    <div class="about-image">
+      <img src="images/about us image.webp" alt="Our premium rental car fleet">
+    </div>
+
+    <div class="about-content">
+      <h2>About Us</h2>
+      <p>
+        We provide reliable and affordable car rental services for all your travel needs.
+        From luxury cars to economy vehicles, we have everything you need for a smooth ride.
+      </p>
+
+      <p>
+        Our mission is to make transportation easy, safe, and accessible with 24/7 support
+        and well-maintained vehicles.
+      </p>
+
+      <div class="stats">
+        <div class="stat-box">
+          <h3>500+</h3>
+          <span>Cars</span>
+        </div>
+
+        <div class="stat-box">
+          <h3>10K+</h3>
+          <span>Customers</span>
+        </div>
+
+        <div class="stat-box">
+          <h3>24/7</h3>
+          <span>Support</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="faq-container">
+      <h2 class="faq-title">Frequently Asked Questions</h2>
+      <p class="faq-subtitle">Find answers to the most common car rental questions.</p>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>What do I need to hire a car with CarRental?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            To hire a car with CarRental, you usually need a valid driving licence,
+            proof of identity, and a valid payment method. Additional documents may
+            be required depending on the vehicle type and booking location.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>Do I need insurance to rent a car?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Basic protection may be included depending on your booking, and extra
+            coverage options may also be available. Always review the rental terms
+            carefully before confirming your reservation.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>How old do I need to be to hire a car?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            The minimum age to hire a car depends on the location and the type of
+            vehicle. In many cases, drivers must be at least 21 years old, and
+            younger drivers may have extra conditions or fees.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>What are the driver's licence requirements for car hire in the UK &amp; Ireland?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Drivers generally need a full and valid driving licence held for the
+            required minimum period. Depending on where your licence was issued,
+            additional identification or an international driving permit may be needed.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          <span>Can I hire a car with a debit card?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Debit card acceptance depends on the rental location, car type, and
+            payment policy. Some bookings allow debit cards, while others may require
+            a credit card for verification and security purposes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews-section">
+    <div class="reviews-container">
+      <h2 class="reviews-title">Customer Reviews</h2>
+      <p class="reviews-subtitle">See what our customers say about their experience</p>
+
+      <div class="reviews-list" id="reviews-list"></div>
+
+      <div class="add-review-wrap">
+        <button type="button" class="add-review-btn" onclick="openReviewForm()">Add Your Review</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEW MODAL -->
+  <div class="review-form-modal" id="reviewModal">
+    <div class="review-form-box">
+      <span class="close-form" onclick="closeReviewForm()">&times;</span>
+      <h2>Leave Your Review</h2>
+
+      <input type="text" id="name" placeholder="Your Name">
+
+      <select id="rating">
+        <option>⭐⭐⭐⭐⭐ Excellent</option>
+        <option>⭐⭐⭐⭐ Good</option>
+        <option>⭐⭐⭐ Average</option>
+        <option>⭐⭐ Poor</option>
+        <option>⭐ Bad</option>
+      </select>
+
+      <textarea id="message" placeholder="Write your experience here..."></textarea>
+
+      <input type="file" id="photo" multiple>
+
+      <button type="button" class="submit-btn" onclick="addReview()">Submit Review</button>
+    </div>
+  </div>
+
+  <!-- IMAGE POPUP -->
+  <div class="popup" id="popup">
+    <span class="close-popup" onclick="closePopup()">&times;</span>
+    <img id="popup-img" src="" alt="Preview">
+  </div>
+
+  <!-- COOKIE POPUP -->
+  <div id="cookie-popup">
+    <div class="cookie-box">
+      <h3>We value your privacy</h3>
+
+      <p>
+        We use cookies to improve your browsing experience,
+        personalize content, and analyze traffic.
+      </p>
+
+      <div class="cookie-buttons">
+        <button id="accept-cookies">Accept</button>
+        <button id="decline-cookies">Decline</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="about.js"></script>
+  <script src="cookie.js"></script>
+</body>
+</html>
